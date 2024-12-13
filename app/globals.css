@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  background: #1f1f1f;
+}
+.main-bg {
+  background: rgb(28, 35, 58) url("/backgrounds/download.jpg");
+  background-size: 100%;
+}
+
+.mode-bg {
+  background: #ffffff;
+  background-size: 100%;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
 }
