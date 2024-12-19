@@ -1,7 +1,3 @@
-Based on the current README content and the nature of your project, here's a draft for a better README file for your AI-powered Next.js quiz app:
-
----
-
 # Quizzler
 
 Quizzler is an AI-powered quiz application built with Next.js. This app leverages AI to generate and manage quizzes efficiently.
