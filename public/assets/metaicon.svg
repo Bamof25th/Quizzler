@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Brain Icon -->
+  <g transform="translate(50, 50)">
+    <path d="M50 10c22 0 40 18 40 40s-18 40-40 40S10 72 10 50 28 10 50 10z" fill="#FFD700" />
+    <path d="M90 40c0-22-18-40-40-40v40h40z" fill="#FFA500" />
+  </g>
+  
+  <!-- Question Marks -->
+  <text x="60" y="50" font-family="Arial" font-size="12" fill="#FF6347" transform="rotate(-20)">
+    ?
+  </text>
+  <text x="130" y="70" font-family="Arial" font-size="14" fill="#1E90FF" transform="rotate(10)">
+    ?
+  </text>
+  <text x="85" y="120" font-family="Arial" font-size="18" fill="#32CD32">
+    ?
+  </text>
+</svg>

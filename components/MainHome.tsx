@@ -11,7 +11,7 @@ const MainHome = () => {
   return (
     <main className="max-w-6xl mx-auto w-full min-h-[25rem] md:min-h-[30rem] lg:min-h-[35rem] flex flex-col px-4 sm:px-6 relative z-10">
       <div className="flex flex-col justify-center items-center gap-2 text-white flex-1">
-        <h1 className="text-3xl sm:text-3xl md:text-6xl lg:text-8xl font-medium uppercase z-10">
+        <h1 className="text-3xl sm:text-3xl md:text-6xl lg:text-8xl font-medium uppercase ">
           Quizzler
         </h1>
         <h1 className="flex px-3 text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-neutral-100 relative">

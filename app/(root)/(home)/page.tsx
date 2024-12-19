@@ -1,7 +1,7 @@
 import Categories from "@/components/Categories";
 import MainHome from "@/components/MainHome";
 import Modes from "@/components/Modes";
-import PageFooter from "@/ui/PageFooter";
+import PageFooter from "@/components/ui/PageFooter";
 import React from "react";
 
 const Page = () => {
@@ -19,7 +19,7 @@ const Page = () => {
         <div className="main-bg flex right-0 w-full xl:w-[50%] min-h-[50vh] xl:h-screen">
           <MainHome />
         </div>
-        <PageFooter alert={false} />
+        <PageFooter/>
       </div>
     </>
   );

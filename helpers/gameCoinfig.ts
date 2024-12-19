@@ -2,7 +2,7 @@ import categoriesJSON from "@/public/assets/categories.json";
 
 const MAX_QUESTIONS = 10;
 const MIN_QUESTIONS = 5;
-const TIMES = [10, 20, 30, 60];
+export const TIMES = [10, 20, 30, 60];
 const DEFAULT_QUESTIONS = 5;
 const DEFAULT_TIME = 30;
 const INFINITE_GAME = false;

@@ -4,9 +4,10 @@ import categories from "../public/assets/categories.json";
 
 const Categories = () => {
   return (
-    <section className="max-w-6xl px-8 pb-6 flex flex-col justify-center">
-      <h2 className="text-2xl mb-8 font-semibold text-white">Categories</h2>
-
+    <section className="max-w-6xl px-12 pb-6 flex flex-col justify-center">
+      <h2 className="text-2xl mb-6 font-bold text-start bg-gradient-to-r from-slate-400 to-slate-50 bg-clip-text text-transparent">
+        Categories
+      </h2>
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 grid-rows-2 gap-4">
         {categories.map((category) => (
           <li
@@ -29,7 +30,7 @@ const Categories = () => {
                 before:bg-gradient-to-tr before:from-white/0 before:to-white/20 
                 before:opacity-0 before:transition-opacity before:duration-500
                 hover:before:opacity-100`}
-              style={{ 
+              style={{
                 borderColor: category.color,
               }}
             >
@@ -44,7 +45,7 @@ const Categories = () => {
                   height={32}
                   aria-hidden="true"
                 />
-                <span 
+                <span
                   className="font-medium text-white drop-shadow-md
                     transition-transform duration-500
                     group-hover:scale-105"
@@ -53,12 +54,12 @@ const Categories = () => {
                   {category.name}
                 </span>
               </div>
-              
+
               {/* Animated background effect */}
-              <div 
+              <div
                 className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-white/10 to-transparent
                   translate-x-[-100%] group-hover:translate-x-[100%] 
-                  transition-transform duration-1000 ease-in-out" 
+                  transition-transform duration-1000 ease-in-out"
               />
             </button>
           </li>
