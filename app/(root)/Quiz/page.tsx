@@ -1,6 +1,6 @@
 import HeaderBtns from "@/components/ui/QuizPage/HeaderBtns";
 import CategoryContainer from "@/components/ui/QuizPage/CategoryContainer";
-import WildcardsRight from "@/components/ui/QuizPage/Wildcardsright";
+import WildcardsRight from "@/components/ui/QuizPage/WildcardsRight";
 import FooterBtns from "@/components/ui/QuizPage/FooterBtns";
 
 const randomBg = {
