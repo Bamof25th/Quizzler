@@ -1,16 +1,27 @@
 "use client";
 
+import playSound, { playThemeSound } from "@/helpers/playSound";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiInfoCircle } from "react-icons/bi";
 
 export default function PageFooter() {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [isSoundOn, setIsSoundOn] = useState(false);
-
+  useEffect(() => {
+    if (!localStorage.getItem("sound"))
+      localStorage.setItem("sound", isSoundOn.toString());
+    else setIsSoundOn(localStorage.getItem("sound") === "true");
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("sound", isSoundOn.toString());
+  }, [isSoundOn]);
   const handleSound = () => {
-    setIsSoundOn(!isSoundOn);
+    setIsSoundOn(true);
+    localStorage.setItem("sound", "true");
+    playSound("click.wav");
+    playThemeSound();
   };
   return (
     <div className="fixed bottom-0 right-0 flex gap-4 p-4 z-20">
@@ -27,7 +38,9 @@ export default function PageFooter() {
           className={`ease-in duration-300 ${
             isTooltipVisible || "group-hover:block group-hover:opacity-100 "
           } ${
-            isTooltipVisible ? "block opacity-100 -translate-x-60" : "opacity-0 translate-x-60"
+            isTooltipVisible
+              ? "block opacity-100 -translate-x-60"
+              : "opacity-0 translate-x-60"
           } transition-all`}
         >
           <div className="ease-in-out duration-500 -translate-y-4 transition-all absolute left-1/2 z-50 flex -translate-x-2 flex-col items-center rounded-sm text-center text-sm text-slate-300 before:-top-2">
@@ -58,10 +71,7 @@ export default function PageFooter() {
           </div>
         </div>
       </button>
-      <button
-        onClick={handleSound}
-        className="hover:scale-110 transition-all duration-300"
-      >
+      <button className="hover:scale-110 transition-all duration-300">
         {isSoundOn ? (
           <Image
             src={"/assets/sound-on.svg"}
@@ -69,6 +79,7 @@ export default function PageFooter() {
             width={24}
             height={24}
             className="border  bg-white rounded-full p-1"
+            onClick={() => setIsSoundOn(false)}
           />
         ) : (
           <>
@@ -78,6 +89,7 @@ export default function PageFooter() {
               width={24}
               height={24}
               className="border  bg-white rounded-full p-1"
+              onClick={handleSound}
             />
           </>
         )}
