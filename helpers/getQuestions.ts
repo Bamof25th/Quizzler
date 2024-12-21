@@ -1,7 +1,5 @@
 import offlineQuestions from "@/public/assets/questions.json";
-
-const randomArray = <T>(array: T[]): T[] =>
-  array.sort(() => 0.5 - Math.random());
+const randomArray = (arr: any) => arr.toSorted(() => 0.5 - Math.random());
 
 interface Question {
   question: string;
